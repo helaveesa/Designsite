@@ -1,0 +1,136 @@
+
+<!-- this page contains the code for 2 charts (composite chart), which must be separated into 2 files -->
+<!-- the first chart renders another chart by using the draw function -->
+<!-- this is the XML source for the first chart -->
+
+<chart>
+	<axis_category size='10' color='000000' alpha='50' />
+	<axis_ticks value_ticks='' category_ticks='' />
+	<axis_value alpha='0' />
+	
+	<chart_border bottom_thickness='0' left_thickness='0' />
+	<chart_data>
+		<row>
+			<null/>
+			<string>ЯНВ</string>
+			<string>ФЕВ</string>
+			<string>МАР</string>
+			<string>АПР</string>
+			<string>МАЙ</string>
+            <string>ИЮН</string>
+            <string>ИЮЛ</string>
+            <string>АВГ</string>
+            <string>СЕН</string>
+            <string>ОКТ</string>
+		</row>
+		<row>
+			<string>Пикет</string>
+			<number tooltip='1'>1</number>
+			<number tooltip='1'>1</number>
+			<number tooltip='5'>5</number>
+			<number tooltip='0'>0</number>
+			<number tooltip='3'>3</number>
+			<number tooltip='2'>2</number>
+            <number tooltip='4'>4</number>
+            <number tooltip='0'>0</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='1'>1</number>
+		</row>
+		<row>
+			<string>Митинг</string>
+			<number tooltip='1'>1</number>
+            <number tooltip='4'>4</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='2'>2</number>
+            <number tooltip='0'>0</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='2'>2</number>
+            <number tooltip='0'>0</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='2'>2</number>
+		</row>
+        <row>
+			<string>Забастовка</string>
+			<number tooltip='2'>2</number>
+            <number tooltip='5'>5</number>
+            <number tooltip='4'>4</number>
+            <number tooltip='5'>5</number>
+            <number tooltip='4'>4</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='1'>1</number>
+            <number tooltip='2'>2</number>
+            <number tooltip='3'>3</number>
+            <number tooltip='6'>6</number>
+		</row>
+	</chart_data>
+	<chart_grid_h alpha='0' />
+	<chart_grid_v alpha='0' />
+	<chart_pref rotation_x='45' drag='false' />
+	<chart_rect x='80' y='-40' width='350' height='250' positive_alpha='0' />
+	<chart_transition type='zoom' delay='0.5' duration='1' order='series' />
+	<chart_type>3d column</chart_type>
+	
+	<draw>
+		<image url='charts.swf?library_path=charts_library&xml_source=xml%2FGallery_Composite_1_2.xml' />
+		<text layer='background' color='000000' alpha='8' size='50' x='0' y='-10' width='500' height='200'>|||||||||||||||||||||||||||||||||||</text>
+	</draw>
+	<filter>
+		<shadow id='shadow1' distance='1' angle='45' color='0' alpha='35' blurX='4' blurY='4' />
+	</filter>
+	
+	<legend shadow='shadow1' x='40' y='75' width='20' height='20' fill_alpha='0' layout='vertical' bullet='square' size='11' color='ffffff' alpha='90' />
+	<tooltip color='ffffff' alpha='90' size='10' background_color_1='ff4488' background_alpha='80' shadow='shadow1' />
+	
+	<series_color>
+		<color>cc9944</color>
+		<color>556688</color>
+	</series_color>
+
+</chart>
+
+
+
+<!--=========================================================================== -->
+<!-- this is the XML source for the second chart -->
+
+<chart>
+
+	<chart_data>
+		<row>
+			<null/>
+			<string>Пикет</string>
+			<string>Митинг</string>
+			<string>Забастовка</string>
+		</row>
+		<row>
+			<string></string>
+			<number>18</number>
+			<number>14</number>
+			<number>33</number>
+		</row>
+	</chart_data>
+	<chart_label as_percentage='1' size='9' color='ffffff' alpha='90' />
+	<chart_pref rotation_x='60' drag='false' />
+	<chart_rect x='120' y='150' width='130' height='130' positive_alpha='0' />
+	<chart_transition type='dissolve' delay='0.3' duration='0.4' order='category' />
+	<chart_type>3d pie</chart_type>
+
+	<filter>
+		<shadow id='shadow1' distance='1' angle='45' color='0' alpha='35' blurX='4' blurY='4' />
+	</filter>
+	
+	<legend shadow='shadow1' x='40' y='150' width='20' height='40' fill_alpha='0' layout='vertical' bullet='circle' size='11' color='ffffff' alpha='90' />
+	
+	<series_color>
+		<color>cc6600</color>
+		<color>cccc44</color>
+		<color>7700ee</color>
+		<color>666666</color>
+		<color>4488cc</color>
+	</series_color>
+	<series_explode>
+		<number>0</number>
+		<number>50</number>
+	</series_explode>
+	
+</chart>
